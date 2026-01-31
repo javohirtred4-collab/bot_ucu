@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Telegram WebApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+
+<div class="app">
+
+  <!-- HOME -->
+  <div class="page active" id="home">
+    <h1>🚀 WebApp</h1>
+    <p>Telegram uchun 3D web sayt</p>
+    <button onclick="go('profile')">Profil</button>
+  </div>
+
+  <!-- PROFILE -->
+  <div class="page" id="profile">
+    <h1>👤 Profil</h1>
+    <p id="user">Foydalanuvchi</p>
+    <button onclick="go('settings')">Sozlamalar</button>
+    <button class="ghost" onclick="go('home')">Orqaga</button>
+  </div>
+
+  <!-- SETTINGS -->
+  <div class="page" id="settings">
+    <h1>⚙️ Sozlamalar</h1>
+    <p>3D + Animatsiya + Telegram</p>
+    <button onclick="closeApp()">Yopish</button>
+    <button class="ghost" onclick="go('home')">Bosh sahifa</button>
+  </div>
+
+</div>
+
+<script src="three.js"></script>
+<script src="telegram.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
